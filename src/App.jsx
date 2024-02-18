@@ -4,7 +4,7 @@ import ToDoListForm from "./Components/ToDoListForm/ToDoListForm";
 import ToDoList from "./Components/ToDoList/ToDoList";
 
 function App() {
-    const [ToDoListitems, setToDoListItems] = useState ([
+    const [ToDoListItems, setToDoListItems] = useState ([
         {
             date: "2024-01-27",
             priority: "Low",
@@ -28,10 +28,7 @@ function App() {
             </header>
             <main>
                 <ToDoListForm />
-                <ToDoList />
-                <pre>
-                    { JSON.stringify(ToDoListitems) }
-                </pre>
+                <ToDoList ToDoListItems={ToDoListItems} />
             </main>
         </div>
     );
