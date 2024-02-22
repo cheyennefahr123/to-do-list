@@ -9,14 +9,14 @@ function App() {
     const [ToDoListItems, setToDoListItems] = useState ([
         {
             id: nanoid(),
-            date: "2024-01-27",
+            date: "01/27/2024",
             priority: "Low",
             link: "N/A",
             description: "N/A"
         },
         {
             id: nanoid(),
-            date: "2025-01-27",
+            date: "01/31/2025",
             priority: "High",
             link: "N/A",
             description: "N/A"
