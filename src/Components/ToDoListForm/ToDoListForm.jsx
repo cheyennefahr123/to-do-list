@@ -11,8 +11,8 @@ const PRIORITIES = {
 
 export default function ToDoListForm( {addItem} ) {
 
-  const [date, setDate] = useState('2024-01-01');
-  const [link, setLink] = useState('http://127.0.0.1');
+  const [date, setDate] = useState('');
+  const [link, setLink] = useState('');
   const [description, setDescription] = useState('');
   const [priority, setPriority] = useState(PRIORITIES.Medium);
 
@@ -66,14 +66,13 @@ export default function ToDoListForm( {addItem} ) {
           required />
       </FormGroup>
       <FormGroup className ="to-do-row">
-        <Label htmlFor="link-url">Supporting Link</Label>
+        <Label htmlFor="link-url">Supporting Link (not required)</Label>
         <Input 
             id="link-url" 
             name="url" 
             type="url" 
             value={link}
-            onChange={handleLinkChange}
-            required />
+            onChange={handleLinkChange} />
       </FormGroup>
       <FormGroup className ="to-do-row d-flex flex-wrap mb-3">
         <div>
