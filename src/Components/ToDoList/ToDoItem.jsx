@@ -11,7 +11,7 @@ export default function ToDoItem( {id, link, description, date, priority, delete
 //Card set up
     return (
         <Card
-        className="my-2 to-do-item-container"
+        className="my-4 mx-1 to-do-item-container"
         color="dark"
         inverse>
         <CardHeader tag="h5">
