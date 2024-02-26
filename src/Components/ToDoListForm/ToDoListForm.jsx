@@ -75,34 +75,40 @@ export default function ToDoListForm( {addItem} ) {
             onChange={handleLinkChange}
             required />
       </FormGroup>
-      <FormGroup className ="to-do-row">
-        <Input 
-          name="radio-priority"
-          type="radio"
-          value={PRIORITIES.High} 
-          checked={priority === PRIORITIES.High}
-          onChange={handlePriorityChange}
-          id="prio-high" />
-        {' '}
-        <Label htmlFor="prio-high" className="me-3">High</Label>
-        <Input 
-          name="radio-priority"
-          type="radio"
-          value={PRIORITIES.Medium}
-          checked={priority === PRIORITIES.Medium}
-          onChange={handlePriorityChange}
-          id="prio-medium" />
-        {' '}
-        <Label htmlFor="prio-medium" className="me-3">Medium</Label>
-        <Input 
-          name="radio-priority"
-          type="radio"
-          value={PRIORITIES.Low}
-          checked={priority === PRIORITIES.Low}
-          onChange={handlePriorityChange}
-          id="prio-low" />
-        {' '}
-        <Label htmlFor="prio-low"className="me-3">Low</Label>
+      <FormGroup className ="to-do-row d-flex flex-wrap mb-3">
+        <div>
+          <Input 
+            name="radio-priority"
+            type="radio"
+            value={PRIORITIES.High} 
+            checked={priority === PRIORITIES.High}
+            onChange={handlePriorityChange}
+            id="prio-high" />
+          {' '}
+          <Label htmlFor="prio-high" className="me-3">High</Label>
+        </div>
+        <div>
+          <Input 
+            name="radio-priority"
+            type="radio"
+            value={PRIORITIES.Medium}
+            checked={priority === PRIORITIES.Medium}
+            onChange={handlePriorityChange}
+            id="prio-medium" />
+          {' '}
+          <Label htmlFor="prio-medium" className="me-3">Medium</Label>
+        </div>
+        <div>
+          <Input 
+            name="radio-priority"
+            type="radio"
+            value={PRIORITIES.Low}
+            checked={priority === PRIORITIES.Low}
+            onChange={handlePriorityChange}
+            id="prio-low" />
+          {' '}
+          <Label htmlFor="prio-low"className="me-3">Low</Label>
+        </div>
       </FormGroup>
       <Button type="submit">Submit</Button>
     </Form>
