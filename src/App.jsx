@@ -41,8 +41,8 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-                <h1>Browser Parking Lot</h1>
-                <p>Send most of your browser tabs into retirement.</p>
+                <h1>To Do List</h1>
+                <p>Add your tasks below</p>
             </header>
             <main>
                 <ToDoListForm addItem={addItem} />

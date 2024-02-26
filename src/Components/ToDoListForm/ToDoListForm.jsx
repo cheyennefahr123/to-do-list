@@ -56,17 +56,7 @@ export default function ToDoListForm( {addItem} ) {
             required />
       </FormGroup>
       <FormGroup className ="to-do-row">
-        <Label htmlFor="link-url">Link</Label>
-        <Input 
-            id="link-url" 
-            name="url" 
-            type="url" 
-            value={link}
-            onChange={handleLinkChange}
-            required />
-      </FormGroup>
-      <FormGroup className ="to-do-row">
-        <Label htmlFor="link-description">Link Description</Label>
+        <Label htmlFor="link-description">Task</Label>
         <Input 
           id="link-description" 
           type="text" 
@@ -74,6 +64,16 @@ export default function ToDoListForm( {addItem} ) {
           value={description} 
           onChange={handleDescriptionChange}
           required />
+      </FormGroup>
+      <FormGroup className ="to-do-row">
+        <Label htmlFor="link-url">Supporting Link</Label>
+        <Input 
+            id="link-url" 
+            name="url" 
+            type="url" 
+            value={link}
+            onChange={handleLinkChange}
+            required />
       </FormGroup>
       <FormGroup className ="to-do-row">
         <Input 
