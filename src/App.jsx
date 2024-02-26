@@ -24,6 +24,20 @@ function App() {
 
     ]);
 
+    function addItem(date, link, description, priority) {
+        setToDoListItems(oldItems => [
+            ...oldItems,
+            {
+                id: nanoid(),
+                date,
+                priority,
+                link,
+                description,
+            }
+        ]);
+
+    }
+
     return (
         <div className="App">
             <header className="App-header">
@@ -31,7 +45,7 @@ function App() {
                 <p>Send most of your browser tabs into retirement.</p>
             </header>
             <main>
-                <ToDoListForm />
+                <ToDoListForm addItem={addItem} />
                 <ToDoList ToDoListItems={ToDoListItems} />
             </main>
         </div>

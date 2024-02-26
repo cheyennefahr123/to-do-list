@@ -9,10 +9,10 @@ const PRIORITIES = {
 }
 
 
-export default function ToDoListForm() {
+export default function ToDoListForm( {addItem} ) {
 
-  const [date, setDate] = useState('');
-  const [link, setLink] = useState('');
+  const [date, setDate] = useState('2024-01-01');
+  const [link, setLink] = useState('http://127.0.0.1');
   const [description, setDescription] = useState('');
   const [priority, setPriority] = useState(PRIORITIES.Medium);
 
@@ -32,8 +32,19 @@ export default function ToDoListForm() {
     setPriority(e.target.value);
   }
 
+  function handleSubmit(e) {
+    e.preventDefault();
+    let [y, M, d] = date.split('-');
+    let formattedDate = `${M}/${d}/${y}`;
+    addItem(formattedDate, link, description, priority);
+    setDate('');
+    setLink('');
+    setDescription('');
+    setPriority(PRIORITIES.Medium);
+  }
+
   return (
-    <Form data-bs-theme="dark" className="to-do-form">
+    <Form data-bs-theme="dark" className="to-do-form" onSubmit={handleSubmit}>
       <FormGroup className ="to-do-row">
         <Label htmlFor="link-date">Date</Label>
         <Input 
