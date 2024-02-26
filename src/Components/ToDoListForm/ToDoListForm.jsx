@@ -46,7 +46,7 @@ export default function ToDoListForm( {addItem} ) {
   return (
     <Form data-bs-theme="dark" className="to-do-form" onSubmit={handleSubmit}>
       <FormGroup className ="to-do-row">
-        <Label htmlFor="link-date">Date</Label>
+        <Label htmlFor="link-date">Due Date</Label>
         <Input 
             id="link-date" 
             name="date" 

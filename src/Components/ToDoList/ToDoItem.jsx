@@ -8,7 +8,7 @@ export default function ToDoItem( {id, link, description, date, priority, delete
       deleteItem(id);
 
     }
-
+//Card set up
     return (
         <Card
         className="my-2 to-do-item-container"
