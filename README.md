@@ -14,4 +14,4 @@ As an employee I want to create a to-do list that includes tasks required for a 
 As a student I want to create a to-do list for my homework assignments so that I am able to complete the assignments based on their due date.
 
 ### Media Stream Service Consumer 
-As someone who enjoys watching shows on multiple streaming services, I would like to create a list of shows and movies that I am interested in with a link to the streaming service provider, so that when I complete a series I can move on to the next show/movie without researching which streaming service hosts the show/movie.
+As someone who enjoys watching shows on multiple streaming services, I would like to create a list of shows and movies that I am interested in with a link to the streaming service provider, so that when I complete a series I can move on to the next show/movie without researching which streaming service I need to go to. 
