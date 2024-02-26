@@ -38,6 +38,10 @@ function App() {
 
     }
 
+    function deleteItem(id) {
+        setToDoListItems(oldItems => oldItems.filter(item => item.id !== id));
+    }
+
     return (
         <div className="App">
             <header className="App-header">
@@ -46,7 +50,9 @@ function App() {
             </header>
             <main>
                 <ToDoListForm addItem={addItem} />
-                <ToDoList ToDoListItems={ToDoListItems} />
+                <ToDoList 
+                    ToDoListItems={ToDoListItems} 
+                    deleteItem={deleteItem}/>
             </main>
         </div>
     );
